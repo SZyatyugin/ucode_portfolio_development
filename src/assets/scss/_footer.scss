@@ -1,68 +1,69 @@
-.footer{
-    margin-top:100px;
+.footer {
+    margin-top: 100px;
     width: 100%;
     display: flex;
-    flex-flow:column;
-    margin-top:30px;
-    h1{
-align-self: center;
+    flex-flow: column;
+    margin-top: 30px;
+    h1 {
+        align-self: center;
     }
-    .contacts{
+    .contacts {
         width: inherit;
         display: flex;
-        flex-flow:column;
+        flex-flow: column;
         align-self: center;
 
-        .form_feedback{
+        .form_feedback {
             width: inherit;
             display: flex;
             flex-flow: column wrap;
             justify-content: center;
             align-self: center;
-           
-            input:not([type='submit']),textarea{
+
+            input:not([type='submit']),
+            textarea {
                 align-self: center;
-                background-color: black; 
+                background-color: black;
                 max-width: 90vw;
-                color:white;
+                color: white;
             }
-            textarea{
+            textarea {
                 resize: none;
             }
-            .form_feedback__main_info{
+            .form_feedback__main_info {
                 display: flex;
-                margin:30px 0 30px 0;
+                margin: 30px 0 30px 0;
                 justify-content: space-around;
-                flex-flow:column;
-                
-                input{
-                    font-size:20px;
+                flex-flow: column;
+
+                input {
+                    font-size: 20px;
                     line-height: 30px;
                     border-radius: 50px;
 
-                    &::placeholder{
-                        font-size:12px;
+                    &::placeholder {
+                        font-size: 12px;
                     }
-                    &:not([type='submit']){
-                       margin-top:20px;
+                    &:not([type='submit']) {
+                        margin-top: 20px;
                     }
                 }
             }
-            @media screen and (max-width:375px) {
-                .form_feedback__main_info{
+            @media screen and (max-width: 375px) {
+                .form_feedback__main_info {
                     display: flex;
                     justify-content: space-around;
-                    flex-flow:column wrap;
-                   
-                    input{
+                    flex-flow: column wrap;
+
+                    input {
                         width: 250px;
-                        margin:10px 0 10px 0;
+                        margin: 10px 0 10px 0;
                         line-height: 30px;
                         font-size: 15px;
                     }
                 }
             }
-            input[type='submit']{
+            input[type='submit'] {
                 cursor: pointer;
                 align-self: center;
                 width: 200px;
@@ -70,47 +71,46 @@ align-self: center;
                 background-color: white;
                 border-radius: 50px;
                 transition: all 0.5s ease;
-    
-                &:hover{
-                background-color: black;
-                color:white;
+
+                &:hover {
+                    background-color: black;
+                    color: white;
                 }
             }
         }
-        .address{
+        .address {
             display: flex;
-            flex:0 0 350px;
+            flex: 0 0 350px;
             flex-flow: row wrap;
             justify-content: space-around;
             align-items: center;
-            >div{
+            > div {
                 display: flex;
                 justify-content: center;
-                font-size:20px;
-                .icon{
-                    flex:0 0 5%;
+                font-size: 20px;
+                .icon {
+                    flex: 0 0 5%;
                     align-self: center;
-                    margin-right:5px;
+                    margin-right: 5px;
                     display: flex;
-                    svg{
+                    svg {
                         height: auto;
-                        width:100%;
-                        fill:white;
+                        width: 100%;
+                        fill: white;
                     }
                 }
             }
-            >div:last-child{
-                flex-flow:row;
-                flex:0 0 70%;
+            > div:last-child {
+                flex-flow: row;
+                flex: 0 0 70%;
                 justify-content: space-around;
-                div{
-                    @media screen and (min-width:320px){
+                div {
+                    @media screen and (min-width: 320px) {
                         flex: 0 0 25%;
                     }
-                    @media screen and (min-width:500px){
+                    @media screen and (min-width: 500px) {
                         flex: 0 0 4%;
                     }
-                    
                 }
             }
         }

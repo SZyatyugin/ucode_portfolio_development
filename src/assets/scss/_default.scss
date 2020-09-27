@@ -1,56 +1,98 @@
-body{
-margin:0;
-padding:0;
-font-family: 'Monument Grotesk';
-width:100%;
-background-color: #131313;
-color: white;
--webkit-user-select: none;
-   -moz-user-select: none;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Monument Grotesk';
+    width: 100%;
+    background-color: #131313;
+    color: white;
+    -webkit-user-select: none;
+    -moz-user-select: none;
     -ms-user-select: none;
-        user-select: none;
+    user-select: none;
 
-&::after{
-    content: "";
-    position: fixed;
-    height: 300%;
-    width:300%;
-    top: -100%;
-    left:-50%;
-    right:0;
-    bottom:0;
-    z-index: -1;
-    background-image: url(../images/noise.png);
-    -webkit-animation: noise 2s steps(10) infinite;
-            animation: noise 2s steps(10) infinite;
+    &::after {
+        content: '';
+        position: fixed;
+        height: 300%;
+        width: 300%;
+        top: -100%;
+        left: -50%;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        background-image: url(../images/noise.png);
+        -webkit-animation: noise 2s steps(10) infinite;
+        animation: noise 2s steps(10) infinite;
+    }
 }
-}
-a{
+a {
     text-decoration: none;
     color: white;
     cursor: pointer;
 }
-@-webkit-keyframes noise{
-    0%, 100%{transform: translate(0,0);}
-    10%{transform: translate(-5%,-10%);}
-    20%{transform: translate(-15%,5%);}
-    30%{transform: translate(7%,-25%);}
-    40%{transform: translate(-5%, 25%);}
-    50%{transform: translate(-15%,10%);}
-    60%{transform: translate(15%,0%);}
-    70%{transform: translate(0%,15%);}
-    80%{transform: translate(3%,35%);}
-    90%{transform: translate(-10%,10%);}
+@-webkit-keyframes noise {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+    10% {
+        transform: translate(-5%, -10%);
+    }
+    20% {
+        transform: translate(-15%, 5%);
+    }
+    30% {
+        transform: translate(7%, -25%);
+    }
+    40% {
+        transform: translate(-5%, 25%);
+    }
+    50% {
+        transform: translate(-15%, 10%);
+    }
+    60% {
+        transform: translate(15%, 0%);
+    }
+    70% {
+        transform: translate(0%, 15%);
+    }
+    80% {
+        transform: translate(3%, 35%);
+    }
+    90% {
+        transform: translate(-10%, 10%);
+    }
 }
-@keyframes noise{
-    0%, 100%{transform: translate(0,0);}
-    10%{transform: translate(-5%,-10%);}
-    20%{transform: translate(-15%,5%);}
-    30%{transform: translate(7%,-25%);}
-    40%{transform: translate(-5%, 25%);}
-    50%{transform: translate(-15%,10%);}
-    60%{transform: translate(15%,0%);}
-    70%{transform: translate(0%,15%);}
-    80%{transform: translate(3%,35%);}
-    90%{transform: translate(-10%,10%);}
+@keyframes noise {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+    10% {
+        transform: translate(-5%, -10%);
+    }
+    20% {
+        transform: translate(-15%, 5%);
+    }
+    30% {
+        transform: translate(7%, -25%);
+    }
+    40% {
+        transform: translate(-5%, 25%);
+    }
+    50% {
+        transform: translate(-15%, 10%);
+    }
+    60% {
+        transform: translate(15%, 0%);
+    }
+    70% {
+        transform: translate(0%, 15%);
+    }
+    80% {
+        transform: translate(3%, 35%);
+    }
+    90% {
+        transform: translate(-10%, 10%);
+    }
 }

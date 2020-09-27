@@ -34,15 +34,14 @@
 
             @for $i from 2 through 3 {
                 &.article-#{$i} {
-
                     margin-top: 30px;
                 }
             }
 
-            >div {
+            > div {
                 overflow: hidden;
 
-                &>p {
+                & > p {
                     text-align: justify;
                 }
 
@@ -87,7 +86,7 @@
         }
     }
 
-    //-----Portfolio-----//    
+    //-----Portfolio-----//
     .section-portfolio {
         display: flex;
         justify-content: center;
@@ -167,7 +166,7 @@
                     .inner_card {
                         transform: translateY(0);
                         transition: all 1s ease;
-                        background-color: rgba($color: #000000, $alpha: .5);
+                        background-color: rgba($color: #000000, $alpha: 0.5);
                     }
                 }
             }
@@ -223,7 +222,7 @@
                 border-radius: 50px;
                 transition: all 1s ease;
 
-                @media screen and (min-width:320px) {
+                @media screen and (min-width: 320px) {
                     flex: 0 0 100%;
                 }
 
@@ -231,7 +230,6 @@
                     flex: 0 0 40%;
                 }
             }
-
 
             .section-services__card-group-inner-2 {
                 padding: 3%;
@@ -242,14 +240,13 @@
                 border-radius: 50px;
                 transition: all 1s ease;
 
-                @media screen and (min-width:320px) {
+                @media screen and (min-width: 320px) {
                     flex: 0 0 100%;
                 }
 
                 @media screen and(min-width:992px) {
                     flex: 0 0 40%;
                 }
-
 
                 p {
                     align-self: center;
@@ -270,7 +267,7 @@
             .section-services__card-group-inner-1,
             .section-services__card-group-inner-2 {
                 &:hover {
-                    box-shadow: 0 0 10px rgba($color:#f4f8f8, $alpha: .8);
+                    box-shadow: 0 0 10px rgba($color: #f4f8f8, $alpha: 0.8);
                     border: 1px solid #008b8b;
                     background-color: black;
                     transform: scale(1.2);
@@ -308,7 +305,7 @@
             }
 
             &:hover {
-                box-shadow: 0 0 10px rgba($color:#f4f8f8, $alpha: .8);
+                box-shadow: 0 0 10px rgba($color: #f4f8f8, $alpha: 0.8);
                 border: 1px solid #008b8b;
                 background-color: black;
                 transform: scale(1.2);
@@ -323,17 +320,18 @@
                     svg {
                         width: 50%;
                         height: auto;
-                        @media screen and (min-width:500px) {
+                        @media screen and (min-width: 500px) {
                             width: 30%;
                         }
                     }
                     &.icon-js {
-                        @media screen and (min-width:500px) {
-                            grid-column:span 2;
+                        @media screen and (min-width: 500px) {
+                            grid-column: span 2;
                         }
                     }
                     @media screen and(min-width:500px) {
-                        &.icon-react, &.icon-vuejs {
+                        &.icon-react,
+                        &.icon-vuejs {
                             grid-row: 2;
                         }
                     }
@@ -353,5 +351,4 @@
             }
         }
     }
-
 }

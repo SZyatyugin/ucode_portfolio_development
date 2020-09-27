@@ -1,35 +1,46 @@
 {
-  "name": "ucode_portfolio",
-  "version": "1.0.0",
-  "description": "",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
-    "start": "webpack --watch",
-    "eslint": "eslint",
-    "prettier": "prettier"
-  },
-  "author": "Stanislav Zyatyugin",
-  "license": "ISC",
-  "devDependencies": {
-    "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^6.1.0",
-    "css-loader": "^4.2.2",
-    "eslint": "^7.8.1",
-    "file-loader": "^6.1.0",
-    "html-webpack-plugin": "^4.4.1",
-    "mini-css-extract-plugin": "^0.11.0",
-    "sass": "^1.26.10",
-    "sass-loader": "^10.0.2",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
-  },
-  "dependencies": {
-    "autoprefixer": "^9.8.6",
-    "node-sass": "^4.14.1",
-    "postcss-cli": "^7.1.2",
-    "postcss-loader": "^3.0.0",
-    "prettier": "^2.1.1"
-  }
+    "name": "ucode_portfolio",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "webpack --mode development",
+        "build": "webpack --mode production",
+        "start": "webpack --watch",
+        "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
+        "eslint": "eslint --fix ."
+    },
+    "author": "Stanislav Zyatyugin",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.11.6",
+        "@babel/preset-env": "^7.11.5",
+        "babel-eslint": "^10.1.0",
+        "babel-loader": "^8.1.0",
+        "clean-webpack-plugin": "^3.0.0",
+        "copy-webpack-plugin": "^6.1.0",
+        "css-loader": "^4.2.2",
+        "eslint": "^7.10.0",
+        "eslint-config-prettier": "^6.12.0",
+        "eslint-plugin-prettier": "^3.1.4",
+        "eslint-watch": "^7.0.0",
+        "eslint-webpack-plugin": "^2.1.0",
+        "file-loader": "^6.1.0",
+        "html-webpack-plugin": "^4.4.1",
+        "mini-css-extract-plugin": "^0.11.0",
+        "prettier": "2.1.2",
+        "prettier-eslint": "^11.0.0",
+        "prettier-loader": "^3.3.0",
+        "prettier-webpack-plugin": "^1.2.0",
+        "sass": "^1.26.10",
+        "sass-loader": "^10.0.2",
+        "webpack": "^4.44.2",
+        "webpack-cli": "^3.3.12"
+    },
+    "dependencies": {
+        "autoprefixer": "^9.8.6",
+        "node-sass": "^4.14.1",
+        "postcss-cli": "^7.1.2",
+        "postcss-loader": "^3.0.0"
+    }
 }
