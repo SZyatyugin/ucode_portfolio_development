@@ -1,12 +1,2 @@
 # Ignore artifacts:
-/node_modules
-/dist
-
-#configuration
-webpack.config.js
-pacakge-lock.json
-package.json
-postcss.config.js
-
-# Ignore all HTML files:
-*.html
+build

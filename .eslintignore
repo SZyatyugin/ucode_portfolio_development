@@ -1,12 +1,1 @@
-#development
-/dist
-# dependencies
 /node_modules
-
-#configuration
-webpack.config.js
-pacakge-lock.json
-package.json
-postcss.config.js
-
-

@@ -20,7 +20,7 @@ body {
         right: 0;
         bottom: 0;
         z-index: -1;
-        background-image: url(../images/noise.png);
+        background-image: url("../assets/images/noise.png");
         -webkit-animation: noise 2s steps(10) infinite;
         animation: noise 2s steps(10) infinite;
     }

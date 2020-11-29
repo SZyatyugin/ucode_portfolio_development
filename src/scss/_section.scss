@@ -107,6 +107,7 @@
             display: flex;
             flex-flow: wrap;
             justify-content: center;
+            max-width:1100px;
 
             .section-portfolio__card {
                 margin: 20px;
@@ -120,16 +121,12 @@
                 transition: all 1s ease;
                 cursor: pointer;
 
-                @for $i from 1 through 3 {
+                @for $i from 1 through 10 {
                     &.cd-#{$i} {
-                        background-image: url(../images/template#{$i}.png);
+                        background-image: url("../assets/images/template#{$i}.png");
                         background-size: cover;
                         background-position: center;
                     }
-                }
-
-                &.cd-4 {
-                    background-color: black;
                 }
 
                 img {
