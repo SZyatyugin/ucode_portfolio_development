@@ -44,7 +44,7 @@
                 li::after {
                     content: '';
                     position: absolute;
-                    top: 30px;
+                    bottom: 20%;
                     display: block;
                     width: 100%;
                     background-color: white;
@@ -105,7 +105,6 @@
                     content: '';
                     display: block;
                     position: absolute;
-                    top: 0;
                     left: 0;
                     right: 0;
                     bottom: 0;
@@ -215,8 +214,8 @@
                         display: block;
                         position: absolute;
                         height: 50px;
-                        top: 3px;
-                        left: -20px;
+                        top: 6%;
+                        left: -95%;
                         border: 1px solid white;
                         border-radius: 50px;
                         width: 50px;
@@ -263,6 +262,9 @@
                 }
 
                 p {
+                    line-height: 6vw;
+                    padding-top:6vw;
+                    padding-bottom:0;
                     align-self: center;
                     font-size: 5vw;
                     text-align: center;
