@@ -28,6 +28,9 @@
         </div>
     </div>
     <header class="header home">
+        <div class="container">
+
+        
         <div class="nav_bar">
             <h1 class="logo">Zyatyugin Stanislav</h1>
             <div class="nav_bar__menu-icon">
@@ -46,18 +49,27 @@
         </div>
         <div class="header_info">
             <div class="message">
-                <div>
+                <div class="message__greeting">
                     <p>My name is Stanislav Zyatyugin.
                     </p>
                 </div>
-                <p>I am a front-end developer.</p>
+                <div class="message__text">
+                    <p>I am a front-end developer.</p>
+                </div>
             </div>
-            <img src='./assets/images/header_logo.png' alt="web-developer photo" class='header_info__img'>
+            <div class="header_info__img">
+                <img src='./assets/images/header_logo.png' alt="web-developer photo">
+            </div>
+            
         </div>
-
-        <div class='header_circle_button'></div>
+        <div class="header_circle_button-wrapper">
+            <div class='header_circle_button'></div>
+        </div>
+        
+    </div>
     </header>
     <div class='section about'>
+        <div class="container">
         <div class='section-mainInfo'>
             <div class='section-mainInfo__article article-1'>
                 <div class='article-1-header'>
@@ -130,7 +142,7 @@
                 <div class='section-portfolio__card cd-1'>
 
                     <div class='inner_card'>
-                        <div>HTML5/SCSS/JS</div>
+                        <div>HTML5/SCSS/JS/Webpack</div>
                         <a href="https://szyatyugin.github.io/club_residence/"><input type="button" value="Take a look"></a>
                     </div>
                 </div>
@@ -148,7 +160,7 @@
                 </div>
                 <div class='section-portfolio__card cd-4'>
                     <div class='inner_card'>
-                        <div>HTML5/SCSS/JS</div>
+                        <div>HTML5/SCSS/JS/Webpack</div>
                         <a href="https://github.com/SZyatyugin/Cappadocia-development"><input type="button" value="Take a look"></a>
                     </div>
                 </div>
@@ -160,7 +172,7 @@
                 </div>
                 <div class='section-portfolio__card cd-6'>
                     <div class='inner_card'>
-                        <div>HTML5/JS/CSS</div>
+                        <div>HTML5/JS/CSS/Webpack</div>
                         <a href="https://github.com/SZyatyugin/tic-tac-toe"><input type="button" value="Take a look"></a>
                     </div>
                 </div>
@@ -184,8 +196,14 @@
                 </div>
                 <div class='section-portfolio__card cd-10'>
                     <div class='inner_card'>
-                        <div>HTML5/TS/SCSS</div>
+                        <div>HTML5/TS/SCSS/Webpack</div>
                         <a href="https://github.com/SZyatyugin/Todo-List-Vue"><input type="button" value="Take a look"></a>
+                    </div>
+                </div>
+                <div class='section-portfolio__card cd-11'>
+                    <div class='inner_card'>
+                        <div>HTML5/JS/SCSS/Webpack/JQuery</div>
+                        <a href="https://github.com/SZyatyugin/Tesla-development"><input type="button" value="Take a look"></a>
                     </div>
                 </div>
             </div>
@@ -445,9 +463,10 @@
                 <p>Websites don't have to be static, I love making pages come to life.</p>
             </div>
         </div>
-
+    </div>
     </div>
     <footer class='footer contacts'>
+        <div class="container">
         <h1>Contacts</h1>
         <div class='contacts'>
             <form action="" method="get" name='form_feedback' class='form_feedback'>
@@ -566,6 +585,7 @@
             </div>
         </div>
         </div>
+    </div>
     </footer>
     
 </body>

@@ -105,6 +105,7 @@
 
         .section-portfolio__templates {
             display: flex;
+            margin:0 auto;
             flex-flow: wrap;
             justify-content: center;
             max-width:1100px;
@@ -121,7 +122,7 @@
                 transition: all 1s ease;
                 cursor: pointer;
 
-                @for $i from 1 through 10 {
+                @for $i from 1 through 11 {
                     &.cd-#{$i} {
                         background-image: url("../assets/images/template#{$i}.png");
                         background-size: cover;

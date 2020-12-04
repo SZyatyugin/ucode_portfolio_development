@@ -1,8 +1,11 @@
+.container{
+    max-width: 1230px;
+    margin:0 auto;
+}
 .header {
     display: flex;
     flex-flow: wrap;
     width: 80%;
-    height: 100vh;
     margin: 0 auto;
     justify-content: center;
     position: relative;
@@ -44,7 +47,7 @@
                 li::after {
                     content: '';
                     position: absolute;
-                    bottom: 20%;
+                    bottom: 16%;
                     display: block;
                     width: 100%;
                     background-color: white;
@@ -63,9 +66,9 @@
         &.fixed {
             //navigation bar while scroll
             top: 0;
-            height: 50px;
+            height: 80px;
             position: fixed;
-            width: 80%;
+            width: 100%;
             transition: all 1s ease;
             animation: nav_bar_fixed 1s ease;
             z-index: 1000;
@@ -78,7 +81,11 @@
     .header_info {
         //message to the left from img in header
         position: relative;
-
+        .header_info__img{
+            img{
+                width:100%;
+            }
+        }
         .message {
             p {
                 padding: 3px;
@@ -88,35 +95,40 @@
 
             & > div {
                 overflow: hidden;
-
-                p:first-child {
-                    animation: show_message 2s ease-in;
+                .message__greeting{
+                    p {
+                        animation: show_message 2s ease-in;
+                    }
+                }
+                
+            }
+            .message__text{
+                width:75%;
+                 p {
+                    animation: typing 1s 1s steps(27);
+                    position: relative;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    width:98%;
+    
+                    &::after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: 25%;
+                        border-right: 1px solid aliceblue;
+                        height: 70%;
+                        animation: caret 1s 1s steps(1) infinite;
+                    }
                 }
             }
-
-            > p {
-                animation: typing 1s 1s steps(27);
-                position: relative;
-                white-space: nowrap;
-                overflow: hidden;
-                width: 67%;
-
-                &::after {
-                    content: '';
-                    display: block;
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    border-right: 1px solid aliceblue;
-                    height: 70%;
-                    animation: caret 1s 1s steps(1) infinite;
-                }
-            }
+            
         }
     }
-
     .header_circle_button {
+        margin:0 auto;
         align-self: flex-end;
         position: relative;
         margin-bottom: 20px;
@@ -157,6 +169,8 @@
             position: fixed;
             height: 100px;
             width: 100%;
+            left: 0;
+            right: 0;
 
             .logo {
                 flex: 0 0 50%;
@@ -168,6 +182,7 @@
             .menu {
                 display: none;
                 transform: translateX(-100%);
+                transition: all 1s ease;
 
                 &.active {
                     position: fixed;
@@ -176,7 +191,7 @@
                     justify-content: right;
                     top: 0;
                     left: 0;
-                    transform: translateY(0);
+                    transform: translateX(0);
                     width: 50vw;
                     height: 100%;
                     background: linear-gradient(
@@ -240,6 +255,7 @@
             z-index: 1;
             display: flex;
             flex-flow: row wrap;
+            margin-top:100px;
 
             .message {
                 flex: 1 0 100%;
@@ -262,11 +278,8 @@
                 }
 
                 p {
-                    line-height: 6vw;
-                    padding-top:6vw;
                     padding-bottom:0;
                     align-self: center;
-                    font-size: 5vw;
                     text-align: center;
                 }
             }
@@ -281,8 +294,23 @@
             display: none;
         }
     }
+    .header .header_info .message .message__text{
+        width:70%;
+        p{
+            width:98%
+        }
+    }
 }
-
+@media (min-width:370px){
+    .header .header_info .message .message__text{
+        width:58%;
+    }
+}
+@media (min-width:450px){
+    .header .header_info .message .message__text{
+        width:50%;
+    }
+}
 @media screen and(min-width:500px) {
     .header {
         .header_info {
@@ -305,12 +333,13 @@
             }
         }
     }
+    .header .header_info .message .message__text{
+        width:100%;
+        p{
+            width:87%
+        }
+    }
 }
-
-//-----min-width:768px-----//
-@media screen and(min-width:768px) {
-}
-
 //-----min-width:992px-----//
 @media screen and(min-width:992px) {
     .header {
@@ -342,7 +371,7 @@
 
         .header_info {
             justify-content: center;
-            margin: 100px 0 0 0;
+            margin: 150px 0 0 0;
             flex: 1 0 100%;
             flex-flow: row;
 
@@ -357,7 +386,7 @@
                 }
 
                 p {
-                    font-size: 2vw;
+                    font-size: 1.3em;
                 }
 
                 > p {
@@ -374,6 +403,13 @@
 
         .header_circle_button {
             display: block;
+        }
+    }
+    .header .header_info .message .message__text{
+        
+        p{
+            width:61%;
+            margin:0 auto;
         }
     }
 }
@@ -397,13 +433,14 @@
             }
 
             .header_info__img {
-                position: absolute;
                 width: 50%;
-
-                top: -105px;
-                right: -166px;
-                bottom: 0;
             }
+        }
+    }
+    .header .header_info .message .message__text{
+        
+        p{
+            margin:unset;
         }
     }
 }
