@@ -122,7 +122,7 @@
                 transition: all 1s ease;
                 cursor: pointer;
 
-                @for $i from 1 through 11 {
+                @for $i from 1 through 13 {
                     &.cd-#{$i} {
                         background-image: url("../assets/images/template#{$i}.png");
                         background-size: cover;
