@@ -44,6 +44,9 @@
             display: none;
             transform: translateX(-100%);
         }
+        &_close{
+            display: none;
+        }
 
         &.active {
             position: fixed;
@@ -71,26 +74,8 @@
                 }
 
             }
-
-            ul {
-                display: flex;
-                flex-flow: column;
-                justify-content: center;
-
-                li+li {
-                    margin-left: 0;
-                    margin-top: 30px;
-                }
-
-                li {
-                    align-self: center;
-                    width: fit-content;
-                }
-            }
-        }
-
-        &>.menu_close {
-            display: block;
+            
+        .menu_close {
             font-size: 20px;
             position: absolute;
             top: 20px;
@@ -126,10 +111,23 @@
             // }
         }
 
+            ul {
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
 
-        &>div {
-            display: none;
+                li+li {
+                    margin-left: 0;
+                    margin-top: 30px;
+                }
+
+                li {
+                    align-self: center;
+                    width: fit-content;
+                }
+            }
         }
+
 
         ul {
             width: 100%;

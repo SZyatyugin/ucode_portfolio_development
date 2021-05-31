@@ -72,7 +72,7 @@
                 overflow: hidden;
 
                 .message__greeting {
-                   
+                   padding:3px 0;
                     p {
                         animation: show_message 2s ease-in;
                         animation-delay: 2.5s;
@@ -84,6 +84,7 @@
 
             .message__text {
                 margin-top: 20px;
+                padding:3px 0;
 
                 p {
                     animation: typing 1s 1s steps(27);
