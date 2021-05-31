@@ -70,21 +70,19 @@
 
             &>div {
                 overflow: hidden;
-
-                .message__greeting {
-                   padding:3px 0;
-                    p {
-                        animation: show_message 2s ease-in;
-                        animation-delay: 2.5s;
-                        white-space: nowrap;
-                    }
+                padding:5px 0;
+                
+            }
+            .message__greeting {
+                p {
+                    animation: show_message 2s ease-in;
+                    animation-delay: 2.5s;
+                    white-space: nowrap;
                 }
-
             }
 
             .message__text {
                 margin-top: 20px;
-                padding:3px 0;
 
                 p {
                     animation: typing 1s 1s steps(27);
@@ -120,7 +118,10 @@
         margin-bottom: 20px;
         width: 40px;
         height: 40px;
-       
+       display: flex;
+       flex-flow:row wrap;
+       align-items: center;
+       justify-content: center;
         border: 1px solid white;
         border-radius: 50px;
         transition: opacity 0.5s ease;
@@ -132,12 +133,9 @@
 
         &::after {
             content: '\2193';
-            display: block;
-            position: absolute;
+            display: inline-block;
             font-size: 16px;
             width: 8px;
-            left: calc(50% - 4px);
-            top: calc(50% - 8px);
 
         }
 
