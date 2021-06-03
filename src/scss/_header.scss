@@ -115,7 +115,6 @@
         height: 40px;
        display: flex;
        flex-flow:row wrap;
-       align-items: center;
        justify-content: center;
         border: 1px solid white;
         border-radius: 50px;
@@ -130,6 +129,7 @@
             content: '\2193';
             display: inline-block;
             font-size: 16px;
+            line-height: 1.6;
             width: 8px;
 
         }
