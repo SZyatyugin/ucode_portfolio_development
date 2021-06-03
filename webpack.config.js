@@ -2,13 +2,14 @@ const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-
+const webpack = require('webpack')
+const ASSET_PATH = process.env.ASSET_PATH || '/'
 module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index.js',
-        publicPath: '',
+        publicPath: ASSET_PATH,
     },
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
@@ -28,9 +29,16 @@ module.exports = {
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
-                    'sass-loader',
+                    {
+                        loader: 'resolve-url-loader',
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true,
+                        },
+                    },
                     'postcss-loader',
-                    'resolve-url-loader',
                 ],
             },
             {
@@ -40,9 +48,9 @@ module.exports = {
             },
             {
                 test: /\.(png|jpe?g|gif)$/i,
-                loader: 'file-loader',
-                options: {
-                    name: './assets/images/[name].[ext]',
+                type: 'asset/resource',
+                generator: {
+                    filename: './assets/images/[name].[ext]',
                 },
             },
             {
@@ -55,6 +63,9 @@ module.exports = {
         ],
     },
     plugins: [
+        new webpack.DefinePlugin({
+            'process.env.ASSET_PATH': JSON.stringify(ASSET_PATH),
+        }),
         new MiniCssExtractPlugin({
             filename: 'style.css',
         }),

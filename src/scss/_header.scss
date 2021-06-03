@@ -1,13 +1,7 @@
-.container {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 10px;
-}
 
 * {
     box-sizing: border-box;
 }
-
 .header {
     height: 100vh;
     padding-top: 100px;
@@ -65,7 +59,7 @@
 
             p {
                 z-index: 1;
-                font-size: 1.37em;
+                //font-size: 1.37em;
                 //line-height: 1.3;
             }
 
@@ -75,6 +69,7 @@
                 
             }
             .message__greeting {
+                line-height: 1.75;
                 p {
                     animation: show_message 2s ease-in;
                     animation-delay: 2.5s;
@@ -84,7 +79,7 @@
 
             .message__text {
                 margin-top: 20px;
-                //line-height: 1.3;
+                line-height: 1.75;
 
                 p {
                     animation: typing 1s 1s steps(27);

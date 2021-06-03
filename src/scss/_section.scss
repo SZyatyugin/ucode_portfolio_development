@@ -38,10 +38,10 @@
                 }
             }
 
-            > div {
+            >div {
                 overflow: hidden;
 
-                & > p {
+                &>p {
                     text-align: justify;
                 }
 
@@ -105,10 +105,10 @@
 
         .section-portfolio__templates {
             display: flex;
-            margin:0 auto;
+            margin: 0 auto;
             flex-flow: wrap;
             justify-content: center;
-            max-width:1100px;
+            max-width: 1100px;
 
             .section-portfolio__card {
                 margin: 20px;
@@ -166,11 +166,12 @@
                         transition: all 1s ease;
                         background-color: rgba($color: #000000, $alpha: 0.5);
                     }
-                    .inner_card__text{
-                    font-size:14px;
+
+                    .inner_card__text {
+                        font-size: 14px;
                     }
                 }
-                
+
             }
         }
     }
@@ -186,9 +187,11 @@
         .icon {
             display: flex;
             justify-content: center;
+            width: 80px;
 
             svg {
-                width: 30%;
+                //width: 30%;
+                width: 100%;
                 height: auto;
                 fill: white;
             }
@@ -209,65 +212,40 @@
             width: 100%;
         }
 
-        .card-group {
+        .card-group,
+        .card-group-2 {
             display: flex;
             justify-content: center;
             margin-top: 50px;
             flex-flow: row wrap;
             flex: 0 0 80%;
 
-            .section-services__card-group-inner-1 {
-                margin-right: 20px;
-                cursor: pointer;
-                display: flex;
-                flex-flow: column;
-                border-radius: 50px;
-                transition: all 1s ease;
-
-                @media screen and (min-width: 320px) {
-                    flex: 0 0 100%;
-                }
-
-                @media screen and(min-width:992px) {
-                    flex: 0 0 40%;
-                }
+            .section-services__card-group-inner+.section-services__card-group-inner {
+                margin-left: 20px;
             }
 
-            .section-services__card-group-inner-2 {
-                padding: 3%;
+            .section-services__card-group-inner {
+
                 cursor: pointer;
                 display: flex;
-                flex-flow: column;
+                flex-flow: row wrap;
                 justify-content: center;
                 border-radius: 50px;
+                padding: 10px;
                 transition: all 1s ease;
+                max-width: 320px;
 
-                @media screen and (min-width: 320px) {
-                    flex: 0 0 100%;
-                }
-
-                @media screen and(min-width:992px) {
-                    flex: 0 0 40%;
-                }
-
-                p {
-                    align-self: center;
+                .h3 {
+                    width: 100%;
+                    margin:20px 0;
                 }
 
                 .card-icons {
-                    position: relative;
+                    width: 100%;
                     display: flex;
-                    flex-flow: row wrap;
                     justify-content: space-between;
-
-                    .icon {
-                        flex: 0 0 50%;
-                    }
                 }
-            }
 
-            .section-services__card-group-inner-1,
-            .section-services__card-group-inner-2 {
                 &:hover {
                     box-shadow: 0 0 10px rgba($color: #f4f8f8, $alpha: 0.8);
                     border: 1px solid #008b8b;
@@ -284,6 +262,7 @@
             flex-flow: row wrap;
             border-radius: 50px;
             transition: all 1s ease;
+            padding: 10px;
             justify-content: center;
 
             @media screen and(min-width:320px) {
@@ -293,6 +272,7 @@
             @media screen and(min-width:768px) {
                 flex: 0 0 50%;
             }
+
             @media screen and(min-width:992px) {
                 flex: 0 0 30%;
             }
@@ -301,17 +281,6 @@
                 flex: 0 0 100%;
             }
 
-            p {
-                width: 70%;
-                align-self: center;
-            }
-
-            &:hover {
-                box-shadow: 0 0 10px rgba($color: #f4f8f8, $alpha: 0.8);
-                border: 1px solid #008b8b;
-                background-color: black;
-                transform: scale(1.2);
-            }
             .card-group-2__inner {
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
@@ -319,19 +288,18 @@
                 justify-content: center;
 
                 .icon {
-                    svg {
-                        width: 50%;
-                        height: auto;
-                        @media screen and (min-width: 500px) {
-                            width: 30%;
-                        }
-                    }
+                    svg {}
+
                     &.icon-js {
+                        width: 100px;
+
                         @media screen and (min-width: 500px) {
                             grid-column: span 2;
                         }
                     }
+
                     @media screen and(min-width:500px) {
+
                         &.icon-react,
                         &.icon-vuejs {
                             grid-row: 2;

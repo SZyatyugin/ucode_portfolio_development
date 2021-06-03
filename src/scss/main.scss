@@ -1,12 +1,14 @@
 @import './reset';
 @import './normalize';
+@import "./default";
+@import "./text";
 @import "./header";
 @import "./navigation-bar";
-@import "./default";
-@import "./preloader"; 
-@import "./section"; 
+@import "./preloader";
+@import "./section";
 @import "./footer";
+
 @font-face {
-    font-family:"Monument Grotesk";
+    font-family: "Monument Grotesk";
     src: url("../assets/fonts/MonumentGrotesk-Regular.ttf");
 }
