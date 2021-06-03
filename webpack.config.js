@@ -9,7 +9,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index.js',
-        publicPath: ASSET_PATH,
+        publicPath:'',
     },
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
